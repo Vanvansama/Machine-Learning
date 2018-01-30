@@ -36,13 +36,13 @@ argsort()函数，从小到大排序的索引值，例：
     array([1, 2, 0], dtype=int32)
 ~~~
 
-##示例一：约会匹配
+## 示例一：约会匹配
 从文本文件datingTestSet2.txt中读取约会数据
 
 数据如图：
 ![dating](http://upload-images.jianshu.io/upload_images/6835596-18d7fc63f4453d89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###读取文件函数file2matrix()如下：
+### 读取文件函数file2matrix()如下：
 
 ~~~python
 def file2matrix(filename):
@@ -62,7 +62,7 @@ def file2matrix(filename):
 ~~~
 line.strip()去掉回车，line.split('\t')用tab分割
 
-###归一化数值函数autoNorm()
+### 归一化数值函数autoNorm()
 
 属性数字差值太大对计算结果影响最大，所以需要将取值范围处理为0到1利用公式
 newValue = (oldValue-min)/(max-min)
@@ -79,7 +79,7 @@ def autoNorm(dataSet):
     return normDataSet, ranges, minVals
 ~~~
 
-###测试分类结果以及错误率
+### 测试分类结果以及错误率
 ~~~python
 def datingClassTest():
     hoRatio = 0.50      #hold out 10%
@@ -118,7 +118,7 @@ def img2vector(filename):
     return returnVect
 ~~~
 
-###测试分类结果以及错误率
+### 测试分类结果以及错误率
 
 ~~~python
 def handwritingClassTest():
